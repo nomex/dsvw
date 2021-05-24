@@ -6,9 +6,8 @@
 FROM alpine:latest
 MAINTAINER  Madhu Akula <madhu@appsecco.com>
 
-RUN apk --no-cache add python py-lxml \
+RUN apk --no-cache add python py-lxml ca-certificates \
 	&& rm -rf /var/cache/apk/* 
-
 ADD dsvw.py /dsvw.py
 
 EXPOSE 8000
